@@ -4,11 +4,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/users")
+@RequestMapping("/v1/users")
 @RestController
+
 public class UserController {
 
-    @GetMapping("/me")
+    @GetMapping("/current")
     public UserResponse getCurrentUser () {
         return new UserResponse();
     }
