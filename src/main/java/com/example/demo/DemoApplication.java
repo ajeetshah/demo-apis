@@ -10,11 +10,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
+@RequestMapping(value = "/")
 @Controller
 @SpringBootApplication
 public class DemoApplication {
 
-	@RequestMapping("/")
+	@GetMapping
 	@ResponseBody
 	public String index() {
 		return "Hello, World!";
